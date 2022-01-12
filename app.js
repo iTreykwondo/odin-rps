@@ -23,20 +23,26 @@ const playRound = (playerSelection, computerSelection) => {
   console.log(`computer: ${computerSelection}`);
 
   if (playerSelection === computerSelection) {
-    console.log("It's a tie");
+    return "It's a tie";
   } else if (playerSelection === "rock" && computerSelection === "paper") {
-    console.log("You lose. Paper beats rock");
+    return "You lose. Paper beats rock";
   } else if (playerSelection === "rock" && computerSelection === "scissors") {
-    console.log("You win. Rock beats scissors");
+    return "You win. Rock beats scissors";
   } else if (playerSelection === "paper" && computerSelection === "rock") {
-    console.log("You win. Paper beats rock");
+    return "You win. Paper beats rock";
   } else if (playerSelection === "paper" && computerSelection === "scissors") {
-    console.log("You lose. Scissors beats paper");
+    return "You lose. Scissors beats paper";
   } else if (playerSelection === "scissors" && computerSelection === "rock") {
-    console.log("You lose. Rock beats scissors");
+    return "You lose. Rock beats scissors";
   } else if (playerSelection === "scissors" && computerSelection === "paper") {
-    console.log("You win. Scissors beats paper");
+    return "You win. Scissors beats paper";
   } else {
-    console.log("Error");
+    return "Error";
+  }
+};
+
+const game = () => {
+  for (let i = 1; i <= 5; i++) {
+    console.log(playRound());
   }
 };
