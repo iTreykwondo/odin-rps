@@ -3,14 +3,16 @@ const computerPlay = (choice) => {
 
   option = Math.floor(Math.random(options) * 3 + 1);
 
-  if (option === 1) {
-    choice = "rock";
-  } else if (option === 2) {
-    choice = "paper";
-  } else if (option === 3) {
-    choice = "scissors";
-  } else {
-    console.log("An error occured");
+  switch (option) {
+    case 1:
+      choice = "rock";
+      break;
+    case 2:
+      choice = "paper";
+      break;
+    case 3:
+      choice = "scissors";
+      break;
   }
   return choice;
 };
