@@ -18,6 +18,7 @@ const computerPlay = (choice) => {
 };
 
 const playRound = (playerSelection, computerSelection) => {
+  playerSelection = prompt("Enter Rock, Paper or Scissors!").toLowerCase();
   computerSelection = computerPlay();
   console.log(`computer: ${computerSelection}`);
 
