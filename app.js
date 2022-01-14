@@ -1,7 +1,5 @@
 const computerPlay = (choice) => {
-  let options = ["rock", "paper", "scissors"];
-
-  option = Math.floor(Math.random(options) * 3 + 1);
+  let option = Math.floor(Math.random() * 3 + 1);
 
   switch (option) {
     case 1:
