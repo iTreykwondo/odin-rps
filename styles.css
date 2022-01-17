@@ -33,3 +33,7 @@ button {
   justify-content: center;
   gap: 48px;
 }
+
+.hidden {
+  display: none;
+}
