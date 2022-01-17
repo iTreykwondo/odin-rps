@@ -41,7 +41,7 @@ const playRound = (playerSelection, computerSelection) => {
     );
   } else if (playerSelection === "rock" && computerSelection === "scissors") {
     return (
-      (results.textContent = `You win. Rock beats scissor`),
+      (results.textContent = `You win. Rock beats scissors`),
       (playerScore += 1),
       (playerScoreLabel.textContent = playerScore)
     );
