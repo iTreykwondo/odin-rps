@@ -1,6 +1,9 @@
 const rockButton = document.querySelector(".rock");
 const paperButton = document.querySelector(".paper");
 const scissorsButton = document.querySelector(".scissors");
+const results = document.querySelector(".results h2");
+let playerScoreLabel = document.querySelector("#p-score");
+let cpuScoreLabel = document.querySelector("#cpu-score");
 
 const computerPlay = (choice) => {
   let option = Math.floor(Math.random() * 3 + 1);
@@ -25,25 +28,25 @@ const playRound = (playerSelection, computerSelection) => {
   console.log(`computer: ${computerSelection}`);
 
   if (playerSelection === computerSelection) {
-    return "It's a tie";
+    return (results.textContent = "It's a tie");
   } else if (playerSelection === "rock" && computerSelection === "paper") {
-    return "You lose. Paper beats rock";
+    return (results.textContent = "You lose. Paper beats rock");
   } else if (playerSelection === "rock" && computerSelection === "scissors") {
-    return "You win. Rock beats scissors";
+    return (results.textContent = "You win. Rock beats scissors");
   } else if (playerSelection === "paper" && computerSelection === "rock") {
-    return "You win. Paper beats rock";
+    return (results.textContent = "You win. Paper beats rock");
   } else if (playerSelection === "paper" && computerSelection === "scissors") {
-    return "You lose. Scissors beats paper";
+    return (results.textContent = "You lose. Scissors beats paper");
   } else if (playerSelection === "scissors" && computerSelection === "rock") {
-    return "You lose. Rock beats scissors";
+    return (results.textContent = "You lose. Rock beats scissors");
   } else if (playerSelection === "scissors" && computerSelection === "paper") {
-    return "You win. Scissors beats paper";
+    return (results.textContent = "You win. Scissors beats paper");
   } else {
-    return "Error";
+    return (results.textContent = "Error");
   }
 };
 
-const game = () => {};
+const scoreTracker = () => {};
 
 rockButton.addEventListener("click", () => {
   console.log(playRound("rock"));
