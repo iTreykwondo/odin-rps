@@ -107,17 +107,17 @@ const replayGame = () => {
 };
 
 rockButton.addEventListener("click", () => {
-  console.log(playRound("rock"));
+  playRound("rock");
   scoreTracker();
 });
 
 paperButton.addEventListener("click", () => {
-  console.log(playRound("paper"));
+  playRound("paper");
   scoreTracker();
 });
 
 scissorsButton.addEventListener("click", () => {
-  console.log(playRound("scissors"));
+  playRound("scissors");
   scoreTracker();
 });
 
