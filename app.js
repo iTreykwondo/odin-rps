@@ -2,6 +2,8 @@ const rockButton = document.querySelector(".rock");
 const paperButton = document.querySelector(".paper");
 const scissorsButton = document.querySelector(".scissors");
 const results = document.querySelector(".results h2");
+const replayButton = document.querySelector(".replay");
+
 let playerScoreLabel = document.querySelector("#p-score");
 let cpuScoreLabel = document.querySelector("#cpu-score");
 
@@ -83,9 +85,25 @@ const scoreTracker = () => {
 };
 
 const disableSelectionButtons = () => {
-  rockButton.style.display = "none";
-  paperButton.style.display = "none";
-  scissorsButton.style.display = "none";
+  rockButton.classList.add("hidden");
+  paperButton.classList.add("hidden");
+  scissorsButton.classList.add("hidden");
+  replayButton.classList.remove("hidden");
+};
+
+const replayGame = () => {
+  replayButton.classList.add("hidden");
+  rockButton.classList.remove("hidden");
+  paperButton.classList.remove("hidden");
+  scissorsButton.classList.remove("hidden");
+
+  results.textContent = "Rock, Paper, Scissors, Shoot!";
+
+  cpuScore = 0;
+  cpuScoreLabel.textContent = cpuScore;
+
+  playerScore = 0;
+  playerScoreLabel.textContent = playerScore;
 };
 
 rockButton.addEventListener("click", () => {
@@ -102,3 +120,5 @@ scissorsButton.addEventListener("click", () => {
   console.log(playRound("scissors"));
   scoreTracker();
 });
+
+replayButton.addEventListener("click", replayGame);
