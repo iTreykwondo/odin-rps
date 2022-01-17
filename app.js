@@ -1,3 +1,7 @@
+const rockButton = document.querySelector(".rock");
+const paperButton = document.querySelector(".paper");
+const scissorsButton = document.querySelector(".scissors");
+
 const computerPlay = (choice) => {
   let option = Math.floor(Math.random() * 3 + 1);
 
@@ -16,7 +20,7 @@ const computerPlay = (choice) => {
 };
 
 const playRound = (playerSelection, computerSelection) => {
-  playerSelection = prompt("Enter Rock, Paper or Scissors!").toLowerCase();
+  // playerSelection = prompt("Enter Rock, Paper or Scissors!").toLowerCase();
   computerSelection = computerPlay();
   console.log(`computer: ${computerSelection}`);
 
@@ -40,3 +44,15 @@ const playRound = (playerSelection, computerSelection) => {
 };
 
 const game = () => {};
+
+rockButton.addEventListener("click", () => {
+  console.log(playRound("rock"));
+});
+
+paperButton.addEventListener("click", () => {
+  console.log(playRound("paper"));
+});
+
+scissorsButton.addEventListener("click", () => {
+  console.log(playRound("scissors"));
+});
